@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      force-response=true:
+  error:
+    include-message: always
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+holoman:
+  name: taylor
+  how-hog: 100
