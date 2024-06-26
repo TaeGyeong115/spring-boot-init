@@ -10,6 +10,5 @@ public class TestConfiguration {
     @Bean
     public String hello() {
         return "hello";
-
     }
 }
