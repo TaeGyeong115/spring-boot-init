@@ -34,7 +34,7 @@ public class Application {
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(Application.class);
 //        application.addListeners(new SampleListener()); // ApplicationStartingEvent
-//        application.setWebApplicationType(WebApplicationType.NONE);
+        application.setWebApplicationType(WebApplicationType.NONE);
 //        application.setBannerMode(Banner.Mode.OFF); // 베너를 끔
         application.run(args);
     }
