@@ -8,6 +8,7 @@ import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.startup.Tomcat;
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,7 +25,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @SpringBootApplication
-@RestController
 public class Application {
     @GetMapping("/hello")
     public String hello() {
@@ -32,26 +32,25 @@ public class Application {
     }
 
     public static void main(String[] args) {
-//        SpringApplication application = new SpringApplication(Application.class);
+        SpringApplication application = new SpringApplication(Application.class);
+//        application.addListeners(new SampleListener()); // ApplicationStartingEvent
 //        application.setWebApplicationType(WebApplicationType.NONE);
-//        application.run(args);
-        SpringApplication.run(Application.class, args);
+//        application.setBannerMode(Banner.Mode.OFF); // 베너를 끔
+        application.run(args);
     }
 
-    @Bean
-    public ServletWebServerFactory serverFactory() {
-        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
-        tomcat.addAdditionalTomcatConnectors(createStandardConnector());
-        return tomcat;
-    }
-
-    private Connector createStandardConnector() {
-        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
-        connector.setPort(8080);
-        return connector;
-    }
-}
-
+//    @Bean
+//    public ServletWebServerFactory serverFactory() {
+//        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
+//        tomcat.addAdditionalTomcatConnectors(createStandardConnector());
+//        return tomcat;
+//    }
+//
+//    private Connector createStandardConnector() {
+//        Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
+//        connector.setPort(8080);
+//        return connector;
+//    }
 
 /* tomcat 띄우기 */
 //public class Application {
@@ -81,4 +80,4 @@ public class Application {
 //        tomcat.start();
 //        tomcat.getServer().await();
 //    }
-//}
+}
