@@ -1,4 +1,4 @@
-package io.taylor.springstudy;
+package io.taylor.springinit;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +13,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @RunWith(SpringRunner.class)
 @TestPropertySource(locations = "classpath:/application.yml")
 @SpringBootTest
-public class SpringStudyApplicationTests {
+public class SpringInitApplicationTests {
     @Autowired
     Environment environment;
 

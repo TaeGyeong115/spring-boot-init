@@ -1,4 +1,4 @@
-package io.taylor.springstudy;
+package io.taylor.springinit;
 
 import io.taylor.sample.SampleController;
 import io.taylor.sample.SampleService;
