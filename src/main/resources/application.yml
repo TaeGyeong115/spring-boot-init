@@ -1,5 +1,5 @@
 server:
-  port: 8443
+  port: 8080
   ssl:
     key-store: keystore.p12
     key-store-type: PKCS12
@@ -10,4 +10,9 @@ server:
 
 holoman:
   name: taylor
-  howLong: 100
+  howLong: 10
+
+taylor:
+  name: taylor
+  age: ${random.int}
+  fullName: ${taylor.name} Kang

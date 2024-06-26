@@ -1,0 +1,6 @@
+server:
+  port: 0
+
+taylor:
+  name: test_taylor
+  age: ${random.int}
