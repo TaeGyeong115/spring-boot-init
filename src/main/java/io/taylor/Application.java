@@ -8,6 +8,7 @@ import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.startup.Tomcat;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
@@ -26,18 +27,18 @@ import java.io.PrintWriter;
 
 @SpringBootApplication
 public class Application {
-    @GetMapping("/hello")
-    public String hello() {
-        return "Hello Spring";
-    }
-
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(Application.class);
 //        application.addListeners(new SampleListener()); // ApplicationStartingEvent
-        application.setWebApplicationType(WebApplicationType.NONE);
 //        application.setBannerMode(Banner.Mode.OFF); // 베너를 끔
+//        application.setWebApplicationType(WebApplicationType.NONE);
         application.run(args);
     }
+
+//    @GetMapping("/hello")
+//    public String hello() {
+//        return "Hello Spring";
+//    }
 
 //    @Bean
 //    public ServletWebServerFactory serverFactory() {

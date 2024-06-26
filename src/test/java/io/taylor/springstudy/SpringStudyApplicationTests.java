@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @RunWith(SpringRunner.class)
-@TestPropertySource(properties = "taylor.name=test2")
+@TestPropertySource(locations = "classpath:/application.yml")
 @SpringBootTest
 public class SpringStudyApplicationTests {
     @Autowired
@@ -19,6 +19,6 @@ public class SpringStudyApplicationTests {
 
     @Test
     public void contextLoads() {
-        assertThat(environment.getProperty("taylor.name")).isEqualTo("test2");
+        assertThat(environment.getProperty("taylor.name")).isEqualTo("test_taylor");
     }
 }

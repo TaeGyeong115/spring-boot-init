@@ -14,5 +14,6 @@ holoman:
 
 taylor:
   name: taylor
-  age: ${random.int}
+  age: ${random.int(1,100}
   fullName: ${taylor.name} Kang
+  sessionTimeout: 25s

@@ -4,3 +4,4 @@ server:
 taylor:
   name: test_taylor
   age: ${random.int}
+  fullName: ${taylor.name} Kang
