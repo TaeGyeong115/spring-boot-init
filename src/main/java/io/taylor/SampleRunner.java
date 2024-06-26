@@ -11,9 +11,6 @@ import org.springframework.stereotype.Component;
 public class SampleRunner implements ApplicationRunner {
     private Logger logger = LoggerFactory.getLogger(SampleRunner.class);
 
-//    @Autowired
-//    private String hello;
-
     @Autowired
     TaylorProperties taylorProperties;
 

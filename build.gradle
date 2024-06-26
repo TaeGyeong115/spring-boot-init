@@ -23,8 +23,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
 
     implementation fileTree( dir: 'libs', include: ['*.jar'])
+
     implementation 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    compileOnly 'org.springframework.boot:spring-boot-devtools'
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'

@@ -40,6 +40,7 @@ public class Application {
 //        return "Hello Spring";
 //    }
 
+
 //    @Bean
 //    public ServletWebServerFactory serverFactory() {
 //        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory();
@@ -52,6 +53,7 @@ public class Application {
 //        connector.setPort(8080);
 //        return connector;
 //    }
+
 
 /* tomcat 띄우기 */
 //public class Application {
